@@ -2,7 +2,7 @@ package config
 
 var GConf Config
 var Build string
-var Version = "0.0.1"
+var Version = "0.0.2"
 var Commit string
 
 type Slave struct {
