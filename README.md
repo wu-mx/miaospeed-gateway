@@ -16,9 +16,10 @@ slaves: # 所有测试点列表，你需要从Miaoko主端拷贝Address,Token过
     token: EXECTOKEN
     # 上面两个字段必填，后端的英文名须和主端配置一致，Miaospeed Gateway通过主端发起的后端请求中
     # 的英文名称来查找对应的后端，从而将请求转发至后端
+    #下方为可选字段，不填将设置为官方默认值
     disable: false # 禁用后端，禁用后主端发起请求会拒绝连接
     buildToken: MSGATE0|114514|geNeral|1X571R930|T0kEN # 自定义后端的Build Token，构建专属后端有利于防止其他后端托管者伪造结果
-    tlsPubKey: "./pub.crt" # 自定义后端公钥，该选项在使用mwss协议时无效
+    tlsPubKey: "./pub.crt" # 自定义后端公钥，该选项在使用mwss协议时有效
     skipTokenVerify: false # 跳过Gateway对主端的执行Token验证
     skipTLSVerify: false # 跳过Gateway对后端的TLS证书验证，某些自签证书可能需要开启
     invoker : 1234567890 # 神奇设置，不怕被揍请自动忽略本行
