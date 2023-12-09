@@ -1,0 +1,15 @@
+builds:
+  - id: miaospeed-gateway
+    dir: .
+    binary: miaospeed-gateway
+    ldflags:
+      - -s -w -X "config.COMMIT={{.Commit}}" -X "config.BUILD=1"
+    goos:
+      - darwin
+      - linux
+      - windows
+archives:
+  - files:
+      - README.md
+      - config.yaml
+      - readme.config.yaml
